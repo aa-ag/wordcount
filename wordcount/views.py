@@ -12,10 +12,15 @@ def result(request):
     '''
     Counts number of words & detects which language input used
     '''
+    # grabs entire user input from textarea "fulltext"
     fulltext = request.GET['fulltext']
+
+    # splits the string into array and counts its lenght
+    count = len(fulltext.split())
     
+    # detects the language in the string
     language = detect(fulltext)
 
-    context = {'fulltext': fulltext, 'language': language}
+    context = {'fulltext': fulltext, 'count': count, 'language': language}
 
     return render(request, 'result.html', context)
