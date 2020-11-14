@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <p>Detected language: <b>{{ language }}</b></p>
+<div class="container" id="resultbox">
+    <p id="detectedlag">Detected language: <b>{{ language }}</b></p>
     <p>Total word cout: <b>{{ count }}</b></p>
     <div>
         <table>
@@ -24,13 +24,13 @@
     </div>
     <br>
     <div>
-        <p>Your input: <span><small class="text-muted">{{ fulltext }}</small></span></p>
+        <p>Your input: <span><small class="text-muted">"{{ fulltext }}"</small></span></p>
     </div>
-    <a href="{% url 'home' %}" class="btn btn-primary">Analize another text</a>
+    <a href="{% url 'home' %}" class="btn btn-info" id="backbnt">Analize Something Else</a>
 </div>
 
 <footer class="container text-center border-top">
-    <a href="{% url 'about' %}" class="btn btn-light">About Me</a>
+    <a href="{% url 'about' %}" class="btn btn-dark" id="aboutbtn">About Me</a>
 </footer>
 
 {% endblock %}

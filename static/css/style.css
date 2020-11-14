@@ -4,4 +4,32 @@ body {
     margin-top: 5vh;
     padding: 10px;
     font-family: 'Pangolin', cursive;
+    color: #ffffff;
+    background-color: rgba(65, 105, 225, 0.918);
+}
+
+.container {
+    max-width: 60%;
+}
+
+#resultbox {
+    border-radius: 6px;
+    background-color: #ffffffd0;
+    color: rgb(0, 0, 0);
+}
+
+#textarea {
+    background-color: rgba(241, 241, 241, 0.664);
+}
+
+#countbtn, #aboutbtn, #backbnt {
+    margin-top: 2vh;
+}
+
+#backbnt {
+    margin-bottom: 4vh;
+}
+
+#detectedlag {
+    padding-top: 4vh;
 }

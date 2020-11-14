@@ -2,18 +2,18 @@
 {% block content %}
 
 <div class="container">
-    <h2>Word counter</h2>
-    <small class="text-muted">Enter words and the program counts them</small>
+    <h2 class="display-4"><u id="underline">Word Counter & Language Detector</u></h2>
+    <small>Enter words and the program counts them</small>
     <form action="{% url 'result' %}">
         <div class="form-group">
-            <textarea name="fulltext" id="" cols="40" rows="10" class="form-control" required></textarea>
-            <input type="submit" class="btn btn-primary" value="Count!">
+            <textarea name="fulltext" id="textarea" cols="30" rows="7" class="form-control" required></textarea>
+            <input type="submit" class="btn btn-info" value="Count!" id="countbtn">
         </div>
     </form>
 </div>
 
 <footer class="container text-center border-top">
-    <a href="{% url 'about' %}" class="btn btn-light">About Me</a>
+    <a href="{% url 'about' %}" class="btn btn-dark" id="aboutbtn">About Me</a>
 </footer>
 
 {% endblock %}
