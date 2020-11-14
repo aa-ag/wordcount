@@ -6,11 +6,14 @@
     <small class="text-muted">Enter words and the program counts them</small>
     <form action="{% url 'result' %}">
         <div class="form-group">
-            <textarea name="fulltext" id="" cols="40" rows="10" class="form-control"></textarea>
+            <textarea name="fulltext" id="" cols="40" rows="10" class="form-control" required></textarea>
             <input type="submit" class="btn btn-primary" value="Count!">
         </div>
     </form>
 </div>
 
+<footer class="container text-center border-top">
+    <a href="{% url 'about' %}" class="btn btn-light">About Me</a>
+</footer>
 
 {% endblock %}
