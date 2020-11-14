@@ -1,8 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
 <div class="container">
-
-    <p>{{ fulltext }}</p>
-
-    <p>{{ count }}</p>
-
-    <p>{{ language }}</p>
+    <p>Detected language: <b>{{ language }}</b></p>
+    <p>Total word cout: <b>{{ count }}</b></p>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Frequency</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for key, value in sorted_frequency %}
+            <tr>
+                <td>"{{ key }}"</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div>
+        <p>Your input: <span><small class="text-muted">{{ fulltext }}</small></span></p>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-primary">Analize another text</a>
 </div>
+
+{% endblock %}
