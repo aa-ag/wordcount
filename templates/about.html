@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h1>About [...]</h1>
-
-    <a href="{% url 'home' %}" class="btn btn-info">Go back home</a>
+<div class="container" id="aboutbox">
+    <div id="aboutboxcontent">
+        <h1>I'm Aaron</h1>
+        <p>And I write software.</p>
+        <a role="button" class="btn btn-light" href="https://www.linkedin.com/in/aa-ag/" target="_blank"><i class="fa fa-linkedin" style="font-size:24px" aria-hidden="true"></i></a>
+        <a role="button" class="btn btn-light" href="https://github.com/aa-ag" target="_blank"><i class="fa fa-github" style="font-size:24px" aria-hidden="true"></i></a>
+        <br><br>
+        <a href="{% url 'home' %}" class="btn btn-info">Go back home</a>
+    </div>
 </div>
 
 {% endblock %}
